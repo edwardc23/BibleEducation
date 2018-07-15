@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".QuizQuestions.Question2">
+
+    <!-- TODO: Update blank fragment layout -->
+    <TextView
+        android:id="@+id/q1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="How many disiples did Jesus have"
+        android:textColor="@android:color/black"/>
+
+    <RadioGroup
+        android:id="@+id/q2_rg"
+        android:layout_width="match_parent"
+        android:layout_height="259dp"
+        android:layout_below="@+id/q1"
+        android:layout_marginTop="25dp">
+
+        <RadioButton
+            android:id="@+id/q2_choice1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2" />
+
+        <RadioButton
+            android:id="@+id/q2_choice2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="21" />
+
+        <RadioButton
+            android:id="@+id/q2_choice3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="12" />
+
+
+    </RadioGroup>
+    <Button
+        android:id="@+id/q2_submit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Submit"
+        android:layout_marginTop="125dp"/>
+
+
+
+
+</FrameLayout>

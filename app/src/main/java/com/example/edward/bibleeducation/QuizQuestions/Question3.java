@@ -1,7 +1,5 @@
 package com.example.edward.bibleeducation.QuizQuestions;
 
-import android.content.Context;
-import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
@@ -22,7 +20,7 @@ import com.example.edward.bibleeducation.R;
 
  * create an instance of this fragment.
  */
-public class Question2 extends Fragment {
+public class Question3 extends Fragment {
     private Button submit;
 
     private RadioGroup radioGroup;
@@ -45,9 +43,9 @@ public class Question2 extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        myView = inflater.inflate(R.layout.fragment_question2, container, false);
-        submit = (Button) myView.findViewById(R.id.q2_submit);
-        radioGroup = (RadioGroup) myView .findViewById(R.id.q2_rg);
+        myView = inflater.inflate(R.layout.fragment_question3, container, false);
+        submit = (Button) myView.findViewById(R.id.q3_submit);
+        radioGroup = (RadioGroup) myView .findViewById(R.id.q3_rg);
 
         radioGroup.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener()
         {
@@ -55,20 +53,20 @@ public class Question2 extends Fragment {
                 // checkedId is the RadioButton selected
 
                 switch(checkedId) {
-                    case R.id.q2_choice1:
+                    case R.id.q3_choice1:
                         Toast.makeText(getActivity(),"Incorrect",Toast.LENGTH_SHORT).show();
                         break;
 
-                    case R.id.q2_choice2:
-                        Toast.makeText(getActivity(),"Incorrect",Toast.LENGTH_SHORT).show();
-                        break;
-                    case R.id.q2_choice3:
+                    case R.id.q3_choice2:
+                        if(QuizActivity.getScore()!="20"){
+                            QuizActivity.addScore(10);
+                        }
+                        Toast.makeText(getActivity(),"Correct",Toast.LENGTH_SHORT).show();                         break;
+                    case R.id.q3_choice3:
 
-                    if(QuizActivity.getScore().equals("10")){
-                        QuizActivity.addScore(10);
-                    }
-                    Toast.makeText(getActivity(),"Correct",Toast.LENGTH_SHORT).show();
-                    break;
+                        Toast.makeText(getActivity()," Really Incorrect",Toast.LENGTH_SHORT).show();
+
+                        break;
                 }
             }
         });

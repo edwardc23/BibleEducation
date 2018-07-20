@@ -1,18 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Fragment.Journal"
-    android:background="@android:color/transparent">
+    >
 
     <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="Journal" />
+    <ListView
+    android:id="@+id/main_demo_lv"
+    android:layout_width="match_parent"
+    android:layout_height="450dp"
+
+    android:gravity="center"
+    android:background="@android:color/holo_blue_light"
+    />
     <Button
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="65dp"
+        android:layout_gravity="bottom"
+        android:text="Home"
+        android:background="@color/Yellow"/>
 
-</LinearLayout>
+</FrameLayout>

@@ -5,7 +5,7 @@
     <application
         android:allowBackup="true"
         android:icon="@mipmap/holybible"
-        android:label="@string/app_name"
+
         android:roundIcon="@mipmap/holybible"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
@@ -16,13 +16,20 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <receiver android:name="com.example.edward.bibleeducation.Classes.MyReceiver">
+        <intent-filter>
+            <action android:name="FIND_SITE" />//this should be unique string as action
+        </intent-filter>
+        </receiver>
         <activity android:name=".Classes.BaseActivity" />
         <activity android:name=".Classes.QuizActivity" />
         <activity android:name=".Adapter.QuizPagerAdapter" />
         <activity android:name=".dialog.CustomDialog" />
         <activity android:name=".Classes.Grades" />
         <activity android:name=".Classes.NotificationBar" />
-        <activity android:name=".Classes.NotificationActivity"></activity>
+        <activity android:name=".Journals.Journal1" />
+        <activity android:name=".Music.MusicPlayer" />
+        <activity android:name=".Classes.MyReceiver"></activity>
     </application>
 
 </manifest>

@@ -13,17 +13,24 @@ import android.support.v4.app.NotificationCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Adapter;
 import android.widget.Button;
+import android.widget.ListView;
 import android.widget.Toast;
 
+import com.example.edward.bibleeducation.Adapter.MainListAdapter;
 import com.example.edward.bibleeducation.R;
+import com.example.edward.bibleeducation.dialog.CustomDialog;
 
 import java.util.ArrayList;
+import java.util.List;
 
-public class Grades extends Activity {
+public class Grades extends BaseActivity {
 static int grades=0;
 static ArrayList <Integer> Scores = new ArrayList<>();
-    private Object notificationBuilder;
+    private List<String> list = new ArrayList<String>();
+    static ListView listView;
+    private MainListAdapter adapter;
     private Button gradeBtn;
 
 
@@ -31,19 +38,37 @@ static ArrayList <Integer> Scores = new ArrayList<>();
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_grades);
-//        gradeBtn=(Button) findViewById(R.id.grades);
-//        gradeBtn.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//
-//            }
-//        });
+
+        gradeBtn=(Button) findViewById(R.id.grades);
+
+        gradeBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                CustomDialog.CustomDialogEventListener listener
+                        = new CustomDialog.CustomDialogEventListener() {
+                    @Override
+                    public void onClickListener(String msg) {
+
+                    }
+                };
+                CustomDialog dialog =
+                        new CustomDialog(Grades.this, listener);
+                dialog.show();
+            }
+        });
     }
+
+
+
     public void getGrades(int grade)
     {
         grades=grades+grade;
-        Scores.add(grades);
+
+
 //Toast.makeText(this,Scores.get(0),Toast.LENGTH_LONG).show();
-        grades=0;
+
+    }
+    public Integer needGrade(){
+        return grades;
     }
 }

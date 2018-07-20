@@ -3,59 +3,51 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".QuizQuestions.Question1">
+    tools:context=".QuizQuestions.Question3">
 
     <!-- TODO: Update blank fragment layout -->
     <TextView
-        android:id="@+id/q1"
+        android:id="@+id/q3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="What is jesus mama name?"
+        android:text="How long was Jesus dead"
         android:textColor="@android:color/black"/>
 
     <RadioGroup
-android:id="@+id/rg"
+        android:id="@+id/q3_rg"
         android:layout_width="match_parent"
         android:layout_height="259dp"
         android:layout_below="@+id/q1"
         android:layout_marginTop="25dp">
 
         <RadioButton
-            android:id="@+id/q1_choice1"
+            android:id="@+id/q3_choice1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Mary" />
+            android:text="10" />
 
         <RadioButton
-            android:id="@+id/q1_choice2"
+            android:id="@+id/q3_choice2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Martha" />
+            android:text="3" />
 
         <RadioButton
-            android:id="@+id/q1_choice3"
+            android:id="@+id/q3_choice3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Rebecca" />
+            android:text="He still dead" />
 
 
     </RadioGroup>
     <Button
-        android:id="@+id/q1_submit"
+        android:id="@+id/q3_submit"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Submit"
         android:layout_marginTop="125dp"/>
 
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="300dp"
-        android:layout_marginTop="180dp">
 
 
 
-
-
-    </RelativeLayout>
-
-    </FrameLayout>
+</FrameLayout>

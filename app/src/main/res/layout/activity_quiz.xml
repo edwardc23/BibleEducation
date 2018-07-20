@@ -5,16 +5,15 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-<android.support.v4.view.ViewPager
-    android:id="@+id/viewpager_vp"
-    android:layout_width="match_parent"
-    android:layout_height="425dp">
+    <android.support.v4.view.ViewPager
+        android:id="@+id/viewpager_vp"
+        android:layout_width="match_parent"
+        android:layout_height="363dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true">
 
 
-
-
-
-</android.support.v4.view.ViewPager>
+    </android.support.v4.view.ViewPager>
 
     <Button
         android:id="@+id/home"
@@ -28,4 +27,29 @@
         android:textColor="@android:color/black"
         tools:layout_editor_absoluteX="97dp"
         tools:layout_editor_absoluteY="420dp" />
+<TextView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/tv_quiz"/>
+
+    <EditText
+        android:id="@+id/handler_et"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true"
+        android:layout_gravity="center"
+        android:hint="Edit.."
+        android:textSize="36sp" />
+
+
+    <Button
+        android:id="@+id/handler_countdown"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/viewpager_vp"
+        android:text="CountDown" />
+
 </RelativeLayout>
